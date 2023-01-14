@@ -1,0 +1,106 @@
+@import url(//db.onlinewebfonts.com/c/3dd6e9888191722420f62dd54664bc94?family=Myriad+Pro);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+.calculator {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-grid {
+    border-radius: 30px;
+    width: fit-content;
+    background-color: #1c1c1c;
+    display: grid;
+    margin-top: 4rem;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+    grid-gap: 10px;
+    padding: 20px;
+    border: solid 2px white;
+}
+
+.span-three {
+    grid-column: span 3;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    background-color: rgb(37, 37, 37);
+    grid-column:  1 / -1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: solid 2px white;
+    border-radius: 20px;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.number {
+    color: white;
+    background-color: rgba(80,80,80, 1);
+}
+
+.orange {
+    color: white;
+    background-color: rgba(255,149,0, 1);
+}
+
+.gray {
+    background-color: rgba(212, 212, 210, 1);
+}
+
+.btn {
+    font-family: "Myriad Pro";
+    font-size: 3rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transition: all 0.2s ease-in;
+}
+
+
+.orange:hover {
+    background-color: rgb(255, 232, 200);
+    color: rgba(255,149,0, 1)
+
+}
+
+.orange:focus {
+    background-color: white;
+    color:rgba(255,149,0, 1);
+}
+
+.number:hover {
+    background-color: rgba(155, 155, 155, 0.7);
+}
+
+.gray:hover {
+    background-color: rgba(252, 252, 249, 0.959);
+}
